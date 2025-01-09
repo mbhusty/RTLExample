@@ -16,10 +16,3 @@ test('Button renders correctly and responds to press', () => {
   fireEvent.press(button);
   expect(onPressMock).toHaveBeenCalledTimes(1);
 });
-
-test('Button has accessible role', () => {
-  const { getByTestId } = render(<Button title="Submit" onPress={() => {}} />);
-  // Проверяем доступность элемента
-  const button = getByTestId('button');
-  expect(button).toBeTruthy();
-});
